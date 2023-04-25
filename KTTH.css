@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.mySlides {display:none;}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100vh;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+.cent{
+    color: #57CC99;
+    position: absolute;
+    text-align: center;
+    right: 40%;
+    top: 40%;
+    width: 300px;
+    line-height: 92%;
+}
+
+#cent_h2{
+    color: #22577A;
+}
+
+.canv_1{
+    position: absolute;
+    right: 20%;
+    border-radius: 25px;
+    background: #C7F9CC;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;  
+    margin: 10%;
+    text-align: left;
+}
+
+.canv_2{
+    position: absolute;
+    right: 40%;
+    border-radius: 25px;
+    background: #C7F9CC;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;  
+    margin: 10%;
+    text-align: center;
+}
+
+.canv_3{
+    position: absolute;
+    right: 80%;
+    border-radius: 25px;
+    background: #C7F9CC;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;  
+    margin: 10%;
+    text-align: right;
+}
