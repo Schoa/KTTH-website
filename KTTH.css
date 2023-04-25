@@ -1,58 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto+Mono:ital@1&display=swap');
+
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     height: 100vh;
     width: 100vh;
     margin: 0rem;
-    overflow: hidden;
+    background-color: #EE964B;
 }
 
-.cent{
-    color: #57CC99;
-    position: absolute;
-    text-align: center;
-    right: 40%;
-    top: 40%;
-    width: 300px;
-    line-height: 92%;
+::-webkit-scrollbar {
+    display: none;
+}
+
+#name{
+    font-family: 'Inconsolata', monospace;
+    color: #19647E;
+    font-size: 100%;
+    text-shadow: none;
 }
 
 #cent_h2{
-    color: #22577A;
+    color: #19647E;
 }
 
-.canv_1{
-    position: absolute;
-    right: 20%;
-    border-radius: 25px;
-    background: #C7F9CC;
-    padding: 20px; 
-    width: 200px;
-    height: 150px;  
-    margin: 10%;
-    text-align: left;
+#cent_h3{
+    color: #28AFB0;
 }
 
-.canv_2{
+#cent_h4{
+    color: #F4D35E;
+}
+
+.cent{
+    color: #1F271B;
     position: absolute;
-    right: 40%;
-    border-radius: 25px;
-    background: #C7F9CC;
-    padding: 20px; 
-    width: 200px;
-    height: 150px;  
-    margin: 10%;
     text-align: center;
-}
-
-.canv_3{
-    position: absolute;
-    right: 80%;
-    border-radius: 25px;
-    background: #C7F9CC;
-    padding: 20px; 
-    width: 200px;
-    height: 150px;  
-    margin: 10%;
-    text-align: right;
+    font-size: 300%;
+    right: 15%;
+    top: 10%;
+    line-height: 92%;
 }
