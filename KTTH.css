@@ -1,43 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto+Mono:ital@1&display=swap');
-
-body{
-    font-family: 'Roboto Mono', monospace;
-    height: 100vh;
-    width: 100vh;
-    margin: 0rem;
-    background-color: #EE964B;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital@1&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-::-webkit-scrollbar {
-    display: none;
+#intro {
+  color: white;
+  opacity: 0;
+  font-size: 5rem;
+  animation: fadeIn 2s ease forwards;
 }
 
 #name{
-    font-family: 'Inconsolata', monospace;
-    color: #19647E;
-    font-size: 100%;
-    text-shadow: none;
+  font-family: 'Poltawski Nowy', serif;
+  font-size: 3rem;
+  opacity: 0;
+  animation: fadeInText 2s ease forwards 3s;
 }
 
-#cent_h2{
-    color: #19647E;
+#ktth {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 6rem;
+  opacity: 0;
+  animation: fadeInText 2s ease forwards 3s;
 }
 
-#cent_h3{
-    color: #28AFB0;
+.intro {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#cent_h4{
-    color: #F4D35E;
+#main {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: mistyrose;
+  transform: scale(0, 0);
+  animation: animate 1s ease-in forwards 2s;
+  overflow: hidden;
 }
 
-.cent{
-    color: #1F271B;
-    position: absolute;
-    text-align: center;
-    font-size: 300%;
-    right: 15%;
-    top: 10%;
-    line-height: 92%;
+.content {
+  width: 100%;
+  text-align: center;
+  overflow-y: auto;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0, 0.005);
+  }
+  50% {
+    transform: scaleY(0.005);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
