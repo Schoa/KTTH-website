@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #intro {
   color: white;
   opacity: 0;
@@ -88,3 +92,16 @@
     transform: translateY(0%);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section1 {
+  height: 600px;
+  background-color: pink;
+}
+
+.section2 {
+  height: 600px;
+  background-color: yellow;
