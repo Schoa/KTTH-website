@@ -99,16 +99,26 @@ html {
 }
 
 .section1 {
-  height: 100rem;
+  height: 60rem;
   background-color: pink;
 }
 
 .section2 {
-  height: 100rem;
+  height: 60rem;
   background-color: yellow;
 }
 
 .section3{
-  height: 100rem;
+  height: 60rem;
   background-color: antiquewhite;
+}
+
+.section4{
+  height: 60rem;
+  background-color: blueviolet;
+}
+
+.section5{
+  height: 60rem;
+  background-color: brown;
 }
