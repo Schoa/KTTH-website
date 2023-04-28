@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +18,7 @@
 }
 
 #name{
-  font-family: 'Poltawski Nowy', serif;
+  font-family: 'Alex Brush', cursive;
   font-size: 3rem;
   opacity: 0;
   animation: fadeInText 2s ease forwards 3s;
@@ -98,11 +99,16 @@ html {
 }
 
 .section1 {
-  height: 600px;
+  height: 100rem;
   background-color: pink;
 }
 
 .section2 {
-  height: 600px;
+  height: 100rem;
   background-color: yellow;
+}
+
+.section3{
+  height: 100rem;
+  background-color: antiquewhite;
 }
