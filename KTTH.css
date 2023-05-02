@@ -52,13 +52,18 @@
   background-color: mistyrose;
   transform: scale(0, 0);
   animation: animate 1s ease-in forwards 2s;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .content {
   width: 100%;
   text-align: center;
   overflow-y: auto;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 @keyframes animate {
@@ -143,8 +148,4 @@ html {
   align-items: center;
   font-family: 'Inter', sans-serif;
   color: black;
-}
-
-a{
-  text-decoration: none;
 }
