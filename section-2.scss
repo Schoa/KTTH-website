@@ -1,115 +1,272 @@
-* {
-  box-sizing: border-box;
+/**
+* Base Variables
+*/
+$font: 'Source IBM Plex Mono';
+
+$color-alpha: #d0f2ee;
+
+$color-black: #000;
+$color-grey: #a9b1b3;
+$color-white: #fff;
+
+$mq-xs: 20em;
+$mq-sm: 30em;
+$mq-md: 54em;
+$mq-lg: 64em;
+$mq-xl: 76.5em;
+$mq-xxl: 114em;
+
+/**
+* Mixins
+*/
+@mixin nth-animation-delay($items: 3, $time: 0.1s) {
+    @for $i from 1 through $items {
+        
+        &:nth-child(#{$i}) {   
+        animation-delay: $time * $i; 
+        }
+    }
 }
 
-body {
-  background: #eeeeee;
-  margin: 2em;
-  font-family: "Roboto", sans-serif;
+/**
+* Base Settings/Overwrite Normalize
+*/
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
-  line-height: 0.2em;
-  &.large {
-    font-size: 80px;
-    letter-spacing: 2px;
-    &:first-child {
-      margin-bottom: 1em;
-    }
-    .tiny {
-      font-size: 40px;
-      vertical-align: top;
-    }
-  }
-  &.medium {
-    font-size: 50px;
-  }
-  &.small {
-    font-size: 26px;
-    text-align: right;
-  }
-}
+    margin-top: 0;
+    margin-bottom: 0.25em;
 
-h2 {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4em;
-  margin-bottom: 2em;
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 0.9;
 }
 
 p {
-  font-size: 13px;
-  line-height: 1.4em;
-  text-align: justify;
-}
-.spread {
-  display: grid;
-  grid-template-columns: minmax(300px, 1.2fr) minmax(300px, 1fr);
-  //height: 100vh;
-  width: 100%;
-  box-shadow: 0 5px 15px hsla(0, 0, 50%, 0.5);
-  margin: 1em auto;
+    margin: 0;
 
-  &__left {
-    background: black;
-    background-image: url("https://nguoilambao.vn/upload_images/images/xu-huong-dich-chuyen-cua-nganh-cong-nghiep-nguoi-co-tam-anh-huong3.jpg");
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: cover;
-  }
-
-  &__right {
-    background: white;
-    padding: 0 3em 0;
-  }
+    color: $color-grey;
 }
 
-.title {
-  text-align: center;
-  max-width: 200px;
-  margin: 0 auto 4em;
+a {
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    color: $color-grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    border: 1px solid $color-grey;
+    transition: all 0.3s ease-in;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-white;
+        background-color: $color-grey;
+    }
 }
 
-.spread__page-bottom {
-  margin-top: 4em;
-  position: relative;
-  &:after {
+figure {
+    margin: 0;
+}
 
-    content: '';
-    border-top: 1px solid black;
-    width: 50%;
+/**
+* Text Selection
+*/
+::selection {
+    color: $color-white;
+    background-color: $color-alpha;
+    text-shadow: none;
+}
+
+/**
+* Body
+*/
+body {
+    font-family: $font;
+    font-size: 100%;
+    line-height: 1.6;
+    color: $color-black;
+    background-color: $color-white;
+
+    @media (min-width: $mq-xs) {
+        font-size: 102.5%;
+    }
+
+    @media (min-width: $mq-sm) {
+        font-size: 105%;
+    }
+
+    @media (min-width: $mq-md) {
+        font-size: 107.5%;
+    }
+
+    @media (min-width: $mq-lg) {
+        font-size: 110%;
+    }
+
+    @media (min-width: $mq-xl) {
+        font-size: 115%;
+    }
+
+    @media (min-width: $mq-xxl) {
+        font-size: 125%;
+    }
+}
+
+/**
+* Components
+*/
+.post {
+    min-height: 100vh;
+    width: 100%;
+
+    border: 0.5em solid $color-white;
+
+    @media (min-width: $mq-md) {
+        display: flex;
+        height: 100vh;
+        min-height: 40em;
+    }
+
+    & > *:first-child {
+        position: relative;
+        
+        height: 14em;
+        
+        background-color: $color-black;
+        
+        @media (min-width: $mq-sm) {
+        height: 18em;
+        }
+        
+        @media (min-width: $mq-md) {
+        flex-basis: 50%;
+        max-width: 50%;
+        height: auto;
+        }
+        
+        @media (min-width: $mq-xl) {
+        flex-basis: 60%;
+        max-width: 60%;
+        }
+    }
+
+    & > *:last-child {
+        
+        @media (min-width: $mq-md) {
+        flex-basis: 50%;
+        max-width: 50%; 
+        }
+        
+        @media (min-width: $mq-xl) {
+        flex-basis: 40%;
+        max-width: 40%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2em;
+        
+        overflow-y: auto;
+    }
+
+    &__category {
+        position: relative;
+        font-weight: 600;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        overflow: hidden;
+        
+        &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        
+        height: 2px;
+        width: 3em;
+
+        background-color: $color-black;
+        animation: slide-in 1s ease-in both 0.5s;
+        }
+    }
+
+    &__content {
+        padding: 2em 0;
+        
+        @media (min-width: $mq-md) {
+        padding: 0 4em; 
+        }
+    }
+
+    &__header {
+      font-size: 7vh;
+        span {
+        @include nth-animation-delay();
+
+        display: inline-block;
+
+        animation: slide-up 0.8s ease-in-out both;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        animation: fade-in 0.8s ease-in-out both 0.5s;
+    }
+
+    &__link {
+        text-align: right;
+    }
+}
+
+/**
+* Helpers
+*/
+.absolute-bg {
     position: absolute;
     top: 0;
-    right: 0;
-  }
+    left: 0;
 
-  .fa-bicycle {
-    position: absolute;
-    bottom: 83%;
-    right: 0;
-  }
-  .num {
-    padding: 1em;
-    background: black;
-    text-align: center;
-    color: white;
-    width: 4em;
-    margin: 0 auto;
-  }
+    height: 100%;
+    width: 100%;
+
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    animation: fade-in 0.8s ease-in-out both 1s;
 }
 
-li{
-  margin: 0 0 15px 0;
+/**
+* Animations
+*/
+@keyframes slide-in {
+    0% { transform: translate3d(-100%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
 }
 
-#return{
-  cursor: pointer;
-  float: right;
+@keyframes slide-up {
+    0% { opacity: 0; transform: translate3d(0, 100%, 0); }
+    90% { opacity: 1; }
+    100% { transform: translate3d(0, 0, 0); }
 }
 
-a{
-  text-decoration: none;
-  color: black;
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+span{
+  margin-bottom: 1vh;
 }
