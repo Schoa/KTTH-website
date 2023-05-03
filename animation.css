@@ -8,10 +8,20 @@ body {
 }
 
 #hdl{
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#hdl{
   font-family: 'IBM Plex Mono', monospace;
   font-size: 150%;
   color: white;
   text-align: center;
+  padding-top: 2%;
+  cursor: context-menu;
 }
 
 #image-track {
@@ -19,13 +29,14 @@ body {
   gap: 4vmin;
   position: absolute;
   left: 20%;
-  right: 20%;
+  right: 30%;
   top: 50%;
   transform: translate(0%, -50%); 
   user-select: none;
 }
   
 #image-track > .image {
+  cursor: pointer;
   width: 40vmin;
   height: 56vmin;
   object-fit: cover;

@@ -41,3 +41,23 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+document.getElementById("image-1").onclick = function () {
+  location.href = "section-1.html";
+};
+
+document.getElementById("image-2").onclick = function () {
+  location.href = "section-2.html";
+};
+
+document.getElementById("image-3").onclick = function () {
+  location.href = "section-3.html";
+};
+
+document.getElementById("image-4").onclick = function () {
+  location.href = "section-4.html";
+};
+
+document.getElementById("image-5").onclick = function () {
+  location.href = "section-5.html";
+};
