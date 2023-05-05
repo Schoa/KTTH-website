@@ -19,6 +19,7 @@
 }
 
 #name{
+  color: #FEFFFF;
   font-family: 'Alex Brush', cursive;
   font-size: 3rem;
   opacity: 0;
@@ -26,6 +27,7 @@
 }
 
 #ktth {
+  color: #FEFFFF;
   font-family: 'Roboto Mono', monospace;
   font-size: 6rem;
   opacity: 0;
@@ -49,7 +51,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: mistyrose;
+  background-color: #0A313A;
   transform: scale(0, 0);
   animation: animate 1s ease-in forwards 2s;
   overflow: auto;
