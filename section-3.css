@@ -195,6 +195,7 @@ body {
   animation-delay: 0.3s;
 }
 .post__text {
+  text-align: justify;
   font-weight: 300;
   animation: fade-in 0.8s ease-in-out both 0.5s;
 }

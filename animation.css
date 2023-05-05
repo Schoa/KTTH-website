@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 body {
   height: 100vh;
   width: 100vw;
@@ -16,7 +16,7 @@ body {
 }
 
 #hdl{
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 150%;
   color: white;
   text-align: center;
