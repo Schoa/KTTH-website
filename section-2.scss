@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 /**
 * Base Variables
 */
-$font: 'Source IBM Plex Mono';
+$font: 'Cormorant Garamond', serif;
 
 $color-alpha: #d0f2ee;
 
@@ -171,18 +172,19 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 2em;
+        padding: em;
         
-        overflow-y: auto;
+        overflow: auto;
     }
 
     &__category {
+        margin: 1rem;
         position: relative;
         font-weight: 600;
         font-size: 0.9em;
         text-transform: uppercase;
         letter-spacing: 0.3em;
-        overflow: hidden;
+        overflow: -moz-hidden-unscrollable;
         
         &:before {
         content: "";
@@ -199,6 +201,7 @@ body {
     }
 
     &__content {
+        margin-top: 1rem;
         padding: 2em 0;
         
         @media (min-width: $mq-md) {
@@ -207,11 +210,11 @@ body {
     }
 
     &__header {
-      font-size: 7vh;
         span {
         @include nth-animation-delay();
 
         display: inline-block;
+        color: #08343D;
 
         animation: slide-up 0.8s ease-in-out both;
         }
@@ -221,8 +224,9 @@ body {
         text-align: justify;
         font-weight: 300;
         animation: fade-in 0.8s ease-in-out both 0.5s;
+        font-weight: bold;
+        color: #214B48;
     }
-
     &__link {
         text-align: right;
     }
@@ -239,7 +243,7 @@ body {
     height: 100%;
     width: 100%;
 
-    background-position: 50%;
+    background-position: 80%;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
