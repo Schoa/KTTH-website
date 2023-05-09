@@ -261,5 +261,9 @@ body {
 }
 
 span {
-  margin-bottom: 1vh;
+  margin-bottom: 3vh;
+}
+
+strong {
+  font-weight: bold;
 }/*# sourceMappingURL=section-2.css.map */
