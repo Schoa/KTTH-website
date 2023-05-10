@@ -215,6 +215,7 @@ body {
 
         display: inline-block;
         color: #08343D;
+        font-size: 5vh;
 
         animation: slide-up 0.8s ease-in-out both;
         }
@@ -229,6 +230,7 @@ body {
     }
     &__link {
         text-align: right;
+        padding-bottom: 1vh;
     }
 }
 
@@ -272,6 +274,7 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
 span{
-  margin-bottom: 1vh;
+  margin-bottom: 0.01vh;
 }

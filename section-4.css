@@ -187,6 +187,7 @@ body {
 .post__header span {
   display: inline-block;
   color: #08343D;
+  font-size: 5vh;
   animation: slide-up 0.8s ease-in-out both;
 }
 .post__header span:nth-child(1) {
@@ -207,6 +208,7 @@ body {
 }
 .post__link {
   text-align: right;
+  padding-bottom: 1vh;
 }
 
 /**
@@ -261,5 +263,5 @@ body {
 }
 
 span {
-  margin-bottom: 1vh;
+  margin-bottom: 0.01vh;
 }/*# sourceMappingURL=section-4.css.map */

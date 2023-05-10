@@ -207,6 +207,7 @@ body {
 }
 .post__link {
   text-align: right;
+  padding-bottom: 1vh;
 }
 
 /**
