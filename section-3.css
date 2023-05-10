@@ -175,16 +175,20 @@ body {
   animation: slide-in 1s ease-in both 0.5s;
 }
 .post__content {
-  padding: 2em 0;
+  padding: 1em 0;
 }
 @media (min-width: 54em) {
   .post__content {
-    padding: 0 4em;
+    padding: 0 1em;
   }
+}
+.post__header {
+  margin-top: 1vh;
 }
 .post__header span {
   display: inline-block;
   color: #08343D;
+  font-size: 4vh;
   animation: slide-up 0.8s ease-in-out both;
 }
 .post__header span:nth-child(1) {
@@ -195,13 +199,6 @@ body {
 }
 .post__header span:nth-child(3) {
   animation-delay: 0.3s;
-}
-.post__text {
-  text-align: justify;
-  font-weight: 300;
-  animation: fade-in 0.8s ease-in-out both 0.5s;
-  font-weight: bold;
-  color: #214B48;
 }
 .post__link {
   text-align: right;
@@ -256,4 +253,20 @@ body {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  cursor: default;
+}
+
+summary {
+  cursor: pointer;
+}
+
+details {
+  text-align: justify;
+  font-weight: 300;
+  animation: fade-in 0.8s ease-in-out both 0.5s;
+  font-weight: bold;
+  color: #214B48;
 }/*# sourceMappingURL=section-3.css.map */

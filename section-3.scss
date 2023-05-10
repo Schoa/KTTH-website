@@ -200,30 +200,24 @@ body {
     }
 
     &__content {
-        padding: 2em 0;
+        padding: 1em 0;
         
         @media (min-width: $mq-md) {
-        padding: 0 4em; 
+        padding: 0 1em; 
         }
     }
 
     &__header {
+        margin-top: 1vh;
         span {
         @include nth-animation-delay();
 
         display: inline-block;
         color: #08343D;
+        font-size: 4vh;
 
         animation: slide-up 0.8s ease-in-out both;
         }
-    }
-
-    &__text {
-        text-align: justify;
-        font-weight: 300;
-        animation: fade-in 0.8s ease-in-out both 0.5s;
-        font-weight: bold;
-        color: #214B48;
     }
 
     &__link {
@@ -270,4 +264,20 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+body{
+    cursor: default;
+}
+
+summary{
+    cursor: pointer;
+}
+
+details{
+    text-align: justify;
+    font-weight: 300;
+    animation: fade-in 0.8s ease-in-out both 0.5s;
+    font-weight: bold;
+    color: #214B48;
 }
